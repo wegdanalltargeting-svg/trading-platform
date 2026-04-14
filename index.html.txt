@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trading Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>📊 Trading Dashboard</h1>
+  </header>
+
+  <div class="container">
+
+    <!-- Dashboard -->
+    <section class="card">
+      <h2>Account Overview</h2>
+      <p>Balance: $<span id="balance">1000</span></p>
+      <p>Win Rate: 65%</p>
+    </section>
+
+    <!-- Signals -->
+    <section class="card">
+      <h2>Signals</h2>
+      <ul id="signals">
+        <li>EURUSD - BUY</li>
+        <li>BTCUSD - SELL</li>
+      </ul>
+    </section>
+
+    <!-- Risk Calculator -->
+    <section class="card">
+      <h2>Risk Calculator</h2>
+      <input type="number" id="capital" placeholder="Capital">
+      <input type="number" id="risk" placeholder="Risk %">
+      <button onclick="calculateRisk()">Calculate</button>
+      <p id="result"></p>
+    </section>
+
+    <!-- Watchlist -->
+    <section class="card">
+      <h2>Watchlist</h2>
+      <input type="text" id="asset" placeholder="Add asset">
+      <button onclick="addAsset()">Add</button>
+      <ul id="watchlist"></ul>
+    </section>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+// Risk Calculator
+function calculateRisk() {
+  let capital = document.getElementById("capital").value;
+  let risk = document.getElementById("risk").value;
+
+  let result = (capital * (risk / 100)).toFixed(2);
+
+  document.getElementById("result").innerText =
+    "Risk Amount: $" + result;
+}
+
+// Watchlist
+function addAsset() {
+  let asset = document.getElementById("asset").value;
+
+  let li = document.createElement("li");
+  li.innerText = asset;
+
+  document.getElementById("watchlist").appendChild(li);
+}
